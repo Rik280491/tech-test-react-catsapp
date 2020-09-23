@@ -3,8 +3,6 @@ import CatCard from "./CatCard";
 import "./CatsContainer.css";
 
 const CatsContainer = ({ catsData }) => {
-	console.log(catsData);
-
 	const renderCats = () => {
 		return catsData.map((cat, index) => {
 			return (

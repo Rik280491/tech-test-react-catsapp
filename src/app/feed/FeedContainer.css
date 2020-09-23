@@ -49,7 +49,7 @@
 	height: 36px;
 	left: 39px;
 	top: 163px;
-	background: #143154;
+	background: #e8eaee;
 	border-radius: 44px;
 	border: none;
 
@@ -59,8 +59,15 @@
 	font-size: 14px;
 	line-height: 120%;
 	/* identical to box height, or 17px */
-	color: #ffffff;
+	color: #143154;
 	text-align: center;
+}
+
+#feed__tab-cats:focus,
+#feed__tab-cats:active {
+	background: #143154;
+	color: #ffffff;
+	outline: none;
 }
 
 #feed__tab-liked {
@@ -80,4 +87,11 @@
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 120%;
+}
+
+#feed__tab-liked:focus,
+#feed__tab-liked:active {
+	background: #143154;
+	color: #ffffff;
+	outline: none;
 }

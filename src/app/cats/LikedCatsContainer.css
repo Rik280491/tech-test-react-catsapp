@@ -1,0 +1,25 @@
+#liked-cats__container {
+	display: grid;
+	grid-template-columns: repeat(2, 159px);
+	grid-gap: 17px;
+	left: 20px;
+	position: relative;
+	top: 237px;
+}
+
+#no-like-message {
+	position: relative;
+	width: 201px;
+	height: 48px;
+	left: 72px;
+	top: 171px;
+
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 120%;
+	/* or 24px */
+	text-align: center;
+	color: #b3bdd2;
+}
