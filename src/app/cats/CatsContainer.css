@@ -1,0 +1,6 @@
+#cats__container {
+	display: grid;
+	grid-template-columns: repeat(2, 159px);
+	position: relative;
+	top: 237px;
+}
