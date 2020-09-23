@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./LaunchPage.css";
 import logo from "../../images/paw-icon.png";
-import AllCats from "../feed/AllCats";
+import FeedContainer from "../feed/FeedContainer";
 
 const LaunchPage = () => {
 	const [load, setLoad] = useState(false);
@@ -14,7 +14,7 @@ const LaunchPage = () => {
 	return (
 		<>
 			{load ? (
-				<AllCats />
+				<FeedContainer />
 			) : (
 				<div id="launch__container" onClick={loadFeed}>
 					<img id="catsat__logo" src={logo} alt="Catsat Logo" />

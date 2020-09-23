@@ -1,0 +1,83 @@
+#feed {
+	position: relative;
+	width: 375px;
+	height: 1001px;
+}
+
+#feed__title {
+	position: absolute;
+	width: 92px;
+	height: 41px;
+	left: 141px;
+	top: 40px;
+
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 41px;
+	/* identical to box height, or 128% */
+
+	text-align: center;
+	letter-spacing: -0.03em;
+
+	color: #143154;
+}
+
+#feed__intro {
+	position: absolute;
+	width: 201px;
+	height: 48px;
+	left: 87px;
+	top: 88px;
+
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 120%;
+	/* or 24px */
+
+	text-align: center;
+
+	color: #143154;
+}
+
+#feed__tab-cats {
+	position: absolute;
+	width: 140px;
+	height: 36px;
+	left: 39px;
+	top: 163px;
+	background: #143154;
+	border-radius: 44px;
+	border: none;
+
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 120%;
+	/* identical to box height, or 17px */
+	color: #ffffff;
+	text-align: center;
+}
+
+#feed__tab-liked {
+	position: absolute;
+	width: 140px;
+	height: 36px;
+	left: 196px;
+	top: 163px;
+	background: #e8eaee;
+	border-radius: 44px;
+	border: none;
+
+	color: #143154;
+	text-align: center;
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 120%;
+}

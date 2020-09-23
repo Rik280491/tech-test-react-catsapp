@@ -1,11 +1,11 @@
 {
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.formatOnSave": true,
-  "prettier.trailingComma": "none",
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/bower_components": true,
-    "**/.git": true
-  }
+	"editor.tabSize": 2,
+	"editor.insertSpaces": true,
+	"editor.formatOnSave": true,
+	"prettier.trailingComma": "none",
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"**/.git": true
+	}
 }
