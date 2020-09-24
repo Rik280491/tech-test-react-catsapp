@@ -18,15 +18,15 @@ const CatCard = ({
 	useEffect(() => {
 		if (likedCats.find((cat) => cat.id === id)) {
 			setLiked(true);
+		} else {
+			setLiked(false);
 		}
 	}, [likedCats, id]);
 
 	const toggleCatLike = () => {
 		if (!liked) {
-			setLiked(true);
 			likeCat(id);
 		} else {
-			setLiked(false);
 			dislikeCat(id);
 		}
 	};
