@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
 import "./FeedContainer.css";
 import CatsContainer from "../cats/CatsContainer";
 import LikedCatsContainer from "../cats/LikedCatsContainer";
 
-const FeedContainer = () => {
+const FeedContainer = ({ allCats }) => {
 	const [catsData, setCatsData] = useState([]);
 	const [likedCatsFeed, setLikedCatsFeed] = useState(false);
 
@@ -20,6 +21,7 @@ const FeedContainer = () => {
 			.then((response) => response.json())
 			.then((cats) => {
 				setCatsData(cats.data);
+				allCats(cats.data);
 			})
 			.catch((error) => {
 				console.error(error);
@@ -53,6 +55,10 @@ const FeedContainer = () => {
 	);
 };
 
-// send catsData to redux store
+const mapDispatchToProps = (dispatch) => {
+	return {
+		allCats: (catsData) => dispatch({ type: "ALL_CATS", payload: { catsData } })
+	};
+};
 
-export default FeedContainer;
+export default connect(null, mapDispatchToProps)(FeedContainer);

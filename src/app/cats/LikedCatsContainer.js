@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import "./LikedCatsContainer.css";
 
 const LikedCatsContainer = () => {
@@ -9,4 +10,6 @@ const LikedCatsContainer = () => {
 	);
 };
 
-export default LikedCatsContainer;
+// state to props likedCats
+
+export default connect(null, null)(LikedCatsContainer);
