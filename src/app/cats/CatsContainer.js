@@ -16,7 +16,7 @@ const CatsContainer = ({ catsData }) => {
 			);
 		});
 	};
-	return <div id="cats__container">{renderCats()}</div>;
+	return <div className="cats__container">{renderCats()}</div>;
 };
 
 export default CatsContainer;

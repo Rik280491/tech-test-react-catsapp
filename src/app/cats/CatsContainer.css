@@ -1,4 +1,4 @@
-#cats__container {
+.cats__container {
 	display: grid;
 	grid-template-columns: repeat(2, 159px);
 	grid-gap: 17px;
