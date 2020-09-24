@@ -12,7 +12,8 @@ const CatCard = ({
 	id,
 	likeCat,
 	dislikeCat,
-	likedCats
+	likedCats,
+	selectCat
 }) => {
 	const [liked, setLiked] = useState(false);
 
@@ -24,7 +25,8 @@ const CatCard = ({
 		}
 	}, [likedCats, id]);
 
-	const toggleCatLike = () => {
+	const toggleCatLike = (e) => {
+		e.stopPropagation();
 		if (!liked) {
 			likeCat(id);
 		} else {
@@ -32,8 +34,16 @@ const CatCard = ({
 		}
 	};
 
+	const showCatDetails = () => {
+		selectCat(id);
+	};
+
 	return (
-		<div id="cat__card" style={{ backgroundColor: backgroundColour }}>
+		<div
+			id="cat__card"
+			style={{ backgroundColor: backgroundColour }}
+			onClick={showCatDetails}
+		>
 			<img id="cat__card-image" src={image} alt={`${name}, the cat`} />
 			<h2 id="cat__card-name">{name}</h2>
 			<p id="cat__card-owner">{`Owned by ${owner}`}</p>
@@ -57,7 +67,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		likeCat: (id) => dispatch({ type: "LIKE_CAT", payload: { id } }),
-		dislikeCat: (id) => dispatch({ type: "DISLIKE_CAT", payload: { id } })
+		dislikeCat: (id) => dispatch({ type: "DISLIKE_CAT", payload: { id } }),
+		selectCat: (id) => dispatch({ type: "SELECTED_CAT", payload: { id } })
 	};
 };
 

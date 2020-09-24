@@ -1,0 +1,83 @@
+#cat__detail-container {
+	width: 375px;
+	height: 889px;
+}
+
+#cat__detail-image {
+	height: 330px;
+	width: 375px;
+}
+
+#cat__detail-name {
+	position: absolute;
+	left: 24px;
+	top: 354px;
+
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 120%;
+	/* identical to box height, or 34px */
+	color: #143154;
+}
+
+#cat__detail-age {
+	position: absolute;
+	width: 159px;
+	height: 19px;
+	left: 24px;
+	top: 392px;
+
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 120%;
+	/* or 19px */
+
+	color: #143154;
+}
+
+#cat__detail-description {
+	position: absolute;
+	width: 327px;
+	height: 168px;
+	left: 24px;
+	top: 432px;
+
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 150%;
+	/* or 24px */
+
+	color: #143154;
+}
+
+#owner__details {
+	display: grid;
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	top: 643px;
+	bottom: 56px;
+
+	background: #ffffff;
+	border-radius: 16px;
+}
+
+#owner__details-name {
+	left: 37px;
+	top: 659px;
+
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 120%;
+	/* identical to box height, or 22px */
+
+	color: #143154;
+}

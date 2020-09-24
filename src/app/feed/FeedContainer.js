@@ -3,8 +3,9 @@ import { connect } from "react-redux";
 import "./FeedContainer.css";
 import CatsContainer from "../cats/containers/CatsContainer";
 import LikedCatsContainer from "../cats/containers/LikedCatsContainer";
+import CatDetail from "../cats/details/CatDetail";
 
-const FeedContainer = ({ allCats }) => {
+const FeedContainer = ({ allCats, selectedCat }) => {
 	const [catsData, setCatsData] = useState([]);
 	const [likedCatsFeed, setLikedCatsFeed] = useState(false);
 
@@ -37,22 +38,34 @@ const FeedContainer = ({ allCats }) => {
 	};
 
 	return (
-		<div id="feed">
-			<h1 id="feed__title">Catsat</h1>
-			<p id="feed__intro">Look after cute cats for strangers for free.</p>
-			<button onClick={renderCats} id="feed__tab-cats">
-				All cats
-			</button>
-			<button onClick={renderLikedCats} id="feed__tab-liked">
-				Liked
-			</button>
-			{!likedCatsFeed ? (
-				<CatsContainer catsData={catsData} />
+		<>
+			{!selectedCat ? (
+				<div id="feed">
+					<h1 id="feed__title">Catsat</h1>
+					<p id="feed__intro">Look after cute cats for strangers for free.</p>
+					<button onClick={renderCats} id="feed__tab-cats">
+						All cats
+					</button>
+					<button onClick={renderLikedCats} id="feed__tab-liked">
+						Liked
+					</button>
+					{!likedCatsFeed ? (
+						<CatsContainer catsData={catsData} />
+					) : (
+						<LikedCatsContainer />
+					)}
+				</div>
 			) : (
-				<LikedCatsContainer />
+				<CatDetail selectedCat={selectedCat} />
 			)}
-		</div>
+		</>
 	);
+};
+
+const mapStateToProps = (state) => {
+	return {
+		selectedCat: state.CatFeed.selectedCat
+	};
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -61,4 +74,4 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
-export default connect(null, mapDispatchToProps)(FeedContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FeedContainer);

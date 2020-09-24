@@ -1,6 +1,7 @@
 const initialState = {
 	allCats: [],
-	likedCats: []
+	likedCats: [],
+	selectedCat: null
 };
 
 const CatFeed = (state = initialState, action) => {
@@ -22,6 +23,11 @@ const CatFeed = (state = initialState, action) => {
 			return {
 				...state,
 				likedCats: state.likedCats.filter((cat) => cat.id !== action.payload.id)
+			};
+		case "SELECTED_CAT":
+			return {
+				...state,
+				selectedCat: state.allCats.find((cat) => cat.id === action.payload.id)
 			};
 		default:
 			return state;
