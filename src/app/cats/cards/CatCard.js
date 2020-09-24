@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import "./CatCard.css";
-import emptyHeart from "../../images/heart.png";
-import filledHeart from "../../images/filled-heart.png";
+import emptyHeart from "../../../images/heart.png";
+import filledHeart from "../../../images/filled-heart.png";
 
 const CatCard = ({
 	name,
 	owner,
 	image,
+	backgroundColour,
 	id,
 	likeCat,
 	dislikeCat,
@@ -32,7 +33,7 @@ const CatCard = ({
 	};
 
 	return (
-		<div id="cat__card">
+		<div id="cat__card" style={{ backgroundColor: backgroundColour }}>
 			<img id="cat__card-image" src={image} alt={`${name}, the cat`} />
 			<h2 id="cat__card-name">{name}</h2>
 			<p id="cat__card-owner">{`Owned by ${owner}`}</p>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import "./LikedCatsContainer.css";
 import "./CatsContainer.css";
-import CatCard from "./CatCard";
+import CatCard from "../cards/CatCard";
 
 const LikedCatsContainer = ({ likedCats }) => {
 	const [displayMessage, setDisplayMessage] = useState(true);
@@ -24,6 +24,7 @@ const LikedCatsContainer = ({ likedCats }) => {
 					owner={cat.owner.name}
 					id={cat.id}
 					image={cat.image_url}
+					backgroundColour={cat.background_color}
 				/>
 			);
 		});

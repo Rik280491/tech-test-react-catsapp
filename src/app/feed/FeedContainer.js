@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import "./FeedContainer.css";
-import CatsContainer from "../cats/CatsContainer";
-import LikedCatsContainer from "../cats/LikedCatsContainer";
+import CatsContainer from "../cats/containers/CatsContainer";
+import LikedCatsContainer from "../cats/containers/LikedCatsContainer";
 
 const FeedContainer = ({ allCats }) => {
 	const [catsData, setCatsData] = useState([]);
