@@ -1,18 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
 import "./CatCard.css";
 import emptyHeart from "../../images/heart.png";
 import filledHeart from "../../images/filled-heart.png";
-import { connect } from "react-redux";
 
-const CatCard = ({ name, owner, image, id, likedCats, dislikeCat }) => {
-	const [likedCat, setLikedCat] = useState(false);
+const CatCard = ({
+	name,
+	owner,
+	image,
+	id,
+	likeCat,
+	dislikeCat,
+	likedCats
+}) => {
+	const [liked, setLiked] = useState(false);
+
+	useEffect(() => {
+		if (likedCats.find((cat) => cat.id === id)) {
+			setLiked(true);
+		}
+	}, [likedCats, id]);
 
 	const toggleCatLike = () => {
-		if (!likedCat) {
-			setLikedCat(true);
-			likedCats(id);
+		if (!liked) {
+			setLiked(true);
+			likeCat(id);
 		} else {
-			setLikedCat(false);
+			setLiked(false);
 			dislikeCat(id);
 		}
 	};
@@ -25,7 +39,7 @@ const CatCard = ({ name, owner, image, id, likedCats, dislikeCat }) => {
 			<div id="cat__card-like">
 				<img
 					onClick={toggleCatLike}
-					src={likedCat ? filledHeart : emptyHeart}
+					src={liked ? filledHeart : emptyHeart}
 					alt="heart this cat"
 				/>
 			</div>
@@ -33,11 +47,17 @@ const CatCard = ({ name, owner, image, id, likedCats, dislikeCat }) => {
 	);
 };
 
+const mapStateToProps = (state) => {
+	return {
+		likedCats: state.CatFeed.likedCats
+	};
+};
+
 const mapDispatchToProps = (dispatch) => {
 	return {
-		likedCats: (id) => dispatch({ type: "LIKE_CAT", payload: { id } }),
+		likeCat: (id) => dispatch({ type: "LIKE_CAT", payload: { id } }),
 		dislikeCat: (id) => dispatch({ type: "DISLIKE_CAT", payload: { id } })
 	};
 };
 
-export default connect(null, mapDispatchToProps)(CatCard);
+export default connect(mapStateToProps, mapDispatchToProps)(CatCard);
