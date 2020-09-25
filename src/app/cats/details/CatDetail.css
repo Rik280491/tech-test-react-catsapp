@@ -3,9 +3,33 @@
 	height: 889px;
 }
 
+#cat_details-close-btn {
+	position: relative;
+	width: 36px;
+	height: 36px;
+	left: 319px;
+	top: 20px;
+	border-radius: 50%;
+	border: 0;
+	background: #ffffff;
+	z-index: 1;
+}
+
+#cat_details-close-btn img {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 8px;
+	left: 8px;
+}
+
 #cat__detail-image {
+	position: absolute;
 	height: 330px;
 	width: 375px;
+	z-index: 0;
+	top: 0;
+	left: 0;
 }
 
 #cat__detail-name {

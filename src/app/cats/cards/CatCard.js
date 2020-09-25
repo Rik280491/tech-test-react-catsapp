@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import "./CatCard.css";
-import emptyHeart from "../../../images/heart.png";
-import filledHeart from "../../../images/filled-heart.png";
+import emptyHeartSVG from "../../../images/empty-heart.svg";
+import filledHeartSVG from "../../../images/filled-heart.svg";
 
 const CatCard = ({
 	name,
@@ -50,7 +50,7 @@ const CatCard = ({
 			<div id="cat__card-like">
 				<img
 					onClick={toggleCatLike}
-					src={liked ? filledHeart : emptyHeart}
+					src={liked ? filledHeartSVG : emptyHeartSVG}
 					alt="heart this cat"
 				/>
 			</div>

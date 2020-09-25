@@ -1,16 +1,15 @@
 #cat__card {
 	width: 159px;
 	height: 230px;
-	left: 20px;
-	border-radius: 10px;
+	border-radius: 20px;
 }
 
 #cat__card-image {
 	position: relative;
 	width: 159px;
 	height: 140px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
 }
 
 #cat__card-name {
@@ -57,7 +56,9 @@
 }
 
 #cat__card-like img {
-	position: absolute;
-	top: 10px;
-	left: 7.5px;
+	position: relative;
+	top: 11.5px;
+	left: 9.5px;
+	width: 17.42px;
+	height: 15.19px;
 }

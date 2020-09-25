@@ -29,6 +29,11 @@ const CatFeed = (state = initialState, action) => {
 				...state,
 				selectedCat: state.allCats.find((cat) => cat.id === action.payload.id)
 			};
+		case "DESELECT_CAT":
+			return {
+				...state,
+				selectedCat: null
+			};
 		default:
 			return state;
 	}
