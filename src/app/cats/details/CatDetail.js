@@ -1,8 +1,10 @@
 import React from "react";
 import "./CatDetail.css";
+import emptyHeart from "../../../images/heart.png";
 
 const CatDetail = ({ selectedCat }) => {
 	console.log(selectedCat);
+
 	return (
 		<div
 			id="cat__detail-container"
@@ -13,8 +15,9 @@ const CatDetail = ({ selectedCat }) => {
 			<h1 id="cat__detail-name">{selectedCat.name}</h1>
 			{/* years to year if 1 */}
 			<p id="cat__detail-age">{`${selectedCat.age} years old`}</p>
-			<div>
-				<img alt="" />
+			<div id="cat__detail-like">
+				<img src={emptyHeart} alt="" />
+				<p>Like</p>
 			</div>
 			<p id="cat__detail-description">{selectedCat.description}</p>
 

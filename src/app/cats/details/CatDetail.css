@@ -13,6 +13,7 @@
 	left: 24px;
 	top: 354px;
 
+	margin: 0;
 	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: bold;
@@ -28,6 +29,7 @@
 	height: 19px;
 	left: 24px;
 	top: 392px;
+	margin: 0;
 
 	font-family: Avenir Next;
 	font-style: normal;
@@ -39,13 +41,55 @@
 	color: #143154;
 }
 
+#cat__detail-like {
+	position: absolute;
+	width: 112px;
+	height: 36px;
+	left: 239px;
+	top: 361px;
+
+	background: #ffffff;
+	border-radius: 44px;
+}
+
+#cat__detail-like img {
+	position: relative;
+	left: 25.29px;
+	right: 6.45%;
+	top: 11.5px;
+	bottom: 11.54%;
+
+	width: 17.42px;
+	height: 15.19px;
+
+	/* border: 2px solid #f46d5c; */
+}
+
+#cat__detail-like p {
+	position: relative;
+	width: 68px;
+	height: 21px;
+	left: 34px;
+	bottom: 25px;
+
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 120%;
+	/* or 19px */
+
+	text-align: center;
+
+	color: #f46d5c;
+}
 #cat__detail-description {
 	position: absolute;
 	width: 327px;
 	height: 168px;
 	left: 24px;
 	top: 432px;
-
+	margin: 0;
 	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: normal;
