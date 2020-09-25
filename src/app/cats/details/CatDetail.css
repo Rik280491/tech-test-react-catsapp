@@ -1,6 +1,6 @@
 #cat__detail-container {
 	width: 375px;
-	height: 889px;
+	height: 100vh;
 }
 
 #cat_details-close-btn {
@@ -15,7 +15,7 @@
 	z-index: 1;
 }
 
-#cat_details-close-btn img {
+#cat_details-close-btn > img {
 	position: absolute;
 	width: 20px;
 	height: 20px;
@@ -80,8 +80,8 @@
 	background: #f46d5c;
 }
 
-#cat__detail-liked img,
-#cat__detail-like img {
+#cat__detail-liked > img,
+#cat__detail-like > img {
 	position: relative;
 	left: 25.29px;
 	top: 11.5px;
@@ -90,12 +90,12 @@
 	height: 15.19px;
 }
 
-#cat__detail-liked img {
+#cat__detail-liked > img {
 	left: 22.29px;
 }
 
-#cat__detail-liked p,
-#cat__detail-like p {
+#cat__detail-liked > p,
+#cat__detail-like > p {
 	position: relative;
 	width: 68px;
 	height: 21px;
@@ -112,7 +112,7 @@
 	color: #f46d5c;
 }
 
-#cat__detail-liked p {
+#cat__detail-liked > p {
 	color: #ffffff;
 }
 
@@ -128,13 +128,10 @@
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 150%;
-	/* or 24px */
-
 	color: #143154;
 }
 
 #owner__details {
-	display: grid;
 	position: absolute;
 	left: 20px;
 	right: 20px;
@@ -146,15 +143,56 @@
 }
 
 #owner__details-name {
-	left: 37px;
-	top: 659px;
+	position: relative;
+	left: 17px;
+	width: 212px;
+	height: 22px;
 
 	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 120%;
-	/* identical to box height, or 22px */
-
 	color: #143154;
+}
+
+#owner__details-list {
+	display: grid;
+	position: absolute;
+	width: 335px;
+	height: 152px;
+	grid-template-columns: 81px 207px;
+	grid-template-rows: repeat(3, 19px);
+	grid-gap: 17px 8px;
+	left: 18px;
+	top: 38px;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.owner__details-list-contact {
+	width: 81px;
+	height: 19px;
+	left: 38px;
+	top: 697px;
+
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 120%;
+	color: #143154;
+}
+.owner__details-list-contact-info {
+	width: 207px;
+	height: 19px;
+	left: 127px;
+	top: 697px;
+
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 120%;
+	color: #7b9abf;
 }

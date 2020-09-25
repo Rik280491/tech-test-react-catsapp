@@ -55,7 +55,7 @@
 	width: 36px;
 }
 
-#cat__card-like img {
+#cat__card-like > img {
 	position: relative;
 	top: 11.5px;
 	left: 9.5px;

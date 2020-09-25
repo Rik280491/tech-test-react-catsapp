@@ -67,20 +67,18 @@ const CatDetail = ({
 
 			<div id="owner__details">
 				<h2 id="owner__details-name">{`Owned by ${selectedCat.owner.name}`}</h2>
-
-				{/* grid or flexbox? */}
-				<ul>
-					<li>
-						Phone
-						<p>{selectedCat.owner.phone}</p>
+				<ul id="owner__details-list">
+					<li className="owner__details-list-contact">Phone</li>
+					<li className="owner__details-list-contact-info">
+						{selectedCat.owner.phone}
 					</li>
-					<li>
-						Email
-						<p>{selectedCat.owner.email}</p>
+					<li className="owner__details-list-contact"> Email</li>
+					<li className="owner__details-list-contact-info">
+						{selectedCat.owner.email}
 					</li>
-					<li>
-						Location
-						<p>{selectedCat.owner.address}</p>
+					<li className="owner__details-list-contact">Location</li>
+					<li className="owner__details-list-contact-info">
+						{selectedCat.owner.address}
 					</li>
 				</ul>
 			</div>

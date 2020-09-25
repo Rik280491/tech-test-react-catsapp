@@ -16,8 +16,6 @@
 	font-weight: bold;
 	font-size: 32px;
 	line-height: 41px;
-	/* identical to box height, or 128% */
-
 	text-align: center;
 	letter-spacing: -0.03em;
 
@@ -36,10 +34,7 @@
 	font-weight: normal;
 	font-size: 20px;
 	line-height: 120%;
-	/* or 24px */
-
 	text-align: center;
-
 	color: #143154;
 }
 
@@ -48,7 +43,7 @@
 	width: 140px;
 	height: 36px;
 	left: 39px;
-	top: 163px;
+	top: 172px;
 	background: #e8eaee;
 	border-radius: 44px;
 	border: none;
@@ -75,7 +70,7 @@
 	width: 140px;
 	height: 36px;
 	left: 196px;
-	top: 163px;
+	top: 172px;
 	background: #e8eaee;
 	border-radius: 44px;
 	border: none;
