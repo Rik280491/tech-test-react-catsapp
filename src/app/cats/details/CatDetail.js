@@ -43,8 +43,11 @@ const CatDetail = ({
 			</button>
 			<img id="cat__detail-image" src={selectedCat.image_url} alt="" />
 			<h1 id="cat__detail-name">{selectedCat.name}</h1>
-			{/* years to year if 1 */}
-			<p id="cat__detail-age">{`${selectedCat.age} years old`}</p>
+			<p id="cat__detail-age">
+				{selectedCat.age <= 1
+					? `${selectedCat.age} year old`
+					: `${selectedCat.age} years old`}
+			</p>
 
 			{likedCat ? (
 				<div id="cat__detail-liked" onClick={toggleCatLike}>
