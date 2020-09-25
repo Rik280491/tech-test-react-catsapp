@@ -1,12 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./CatDetail.css";
 import emptyHeartSVG from "../../../images/empty-heart.svg";
+import whiteHeartSVG from "../../../images/white-heart.svg";
 import closeButtonSVG from "../../../images/x-close-button.svg";
 import { connect } from "react-redux";
 
-const CatDetail = ({ selectedCat, deselectCat }) => {
+const CatDetail = ({
+	likedCatsArr,
+	selectedCat,
+	deselectCatDetails,
+	likeCat,
+	dislikeCat
+}) => {
+	const [likedCat, setLikedCat] = useState(false);
+
+	useEffect(() => {
+		if (likedCatsArr.find((cat) => cat.id === selectedCat.id)) {
+			setLikedCat(true);
+		}
+	}, [likedCatsArr, selectedCat.id]);
+
 	const closeCatDetail = () => {
-		deselectCat();
+		deselectCatDetails();
+	};
+
+	const toggleCatLike = () => {
+		if (likedCat) {
+			dislikeCat(selectedCat.id);
+			setLikedCat(false);
+		} else {
+			likeCat(selectedCat.id);
+		}
 	};
 
 	return (
@@ -21,10 +45,24 @@ const CatDetail = ({ selectedCat, deselectCat }) => {
 			<h1 id="cat__detail-name">{selectedCat.name}</h1>
 			{/* years to year if 1 */}
 			<p id="cat__detail-age">{`${selectedCat.age} years old`}</p>
-			<div id="cat__detail-like">
-				<img src={emptyHeartSVG} alt="" />
-				<p>Like</p>
-			</div>
+
+			{likedCat ? (
+				<div id="cat__detail-liked" onClick={toggleCatLike}>
+					<img
+						src={whiteHeartSVG}
+						alt={` a heart to unlike ${selectedCat.name}, the cat`}
+					/>
+					<p>Liked</p>
+				</div>
+			) : (
+				<div id="cat__detail-like" onClick={toggleCatLike}>
+					<img
+						src={emptyHeartSVG}
+						alt={`a heart to like ${selectedCat.name}, the cat`}
+					/>
+					<p>Like</p>
+				</div>
+			)}
 			<p id="cat__detail-description">{selectedCat.description}</p>
 
 			<div id="owner__details">
@@ -50,10 +88,18 @@ const CatDetail = ({ selectedCat, deselectCat }) => {
 	);
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapStateToProps = (state) => {
 	return {
-		deselectCat: () => dispatch({ type: "DESELECT_CAT" })
+		likedCatsArr: state.CatFeed.likedCats
 	};
 };
 
-export default connect(null, mapDispatchToProps)(CatDetail);
+const mapDispatchToProps = (dispatch) => {
+	return {
+		deselectCatDetails: () => dispatch({ type: "DESELECT_CAT" }),
+		likeCat: (id) => dispatch({ type: "LIKE_CAT", payload: { id } }),
+		dislikeCat: (id) => dispatch({ type: "DISLIKE_CAT", payload: { id } })
+	};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CatDetail);

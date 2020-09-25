@@ -12,18 +12,18 @@ const CatCard = ({
 	id,
 	likeCat,
 	dislikeCat,
-	likedCats,
-	selectCat
+	likedCatsArr,
+	selectCatDetails
 }) => {
 	const [liked, setLiked] = useState(false);
 
 	useEffect(() => {
-		if (likedCats.find((cat) => cat.id === id)) {
+		if (likedCatsArr.find((cat) => cat.id === id)) {
 			setLiked(true);
 		} else {
 			setLiked(false);
 		}
-	}, [likedCats, id]);
+	}, [likedCatsArr, id]);
 
 	const toggleCatLike = (e) => {
 		e.stopPropagation();
@@ -35,7 +35,7 @@ const CatCard = ({
 	};
 
 	const showCatDetails = () => {
-		selectCat(id);
+		selectCatDetails(id);
 	};
 
 	return (
@@ -60,7 +60,7 @@ const CatCard = ({
 
 const mapStateToProps = (state) => {
 	return {
-		likedCats: state.CatFeed.likedCats
+		likedCatsArr: state.CatFeed.likedCats
 	};
 };
 
@@ -68,7 +68,8 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		likeCat: (id) => dispatch({ type: "LIKE_CAT", payload: { id } }),
 		dislikeCat: (id) => dispatch({ type: "DISLIKE_CAT", payload: { id } }),
-		selectCat: (id) => dispatch({ type: "SELECTED_CAT", payload: { id } })
+		selectCatDetails: (id) =>
+			dispatch({ type: "SELECTED_CAT", payload: { id } })
 	};
 };
 
