@@ -24,12 +24,12 @@ const CatFeed = (state = initialState, action) => {
 				...state,
 				likedCats: state.likedCats.filter((cat) => cat.id !== action.payload.id)
 			};
-		case "SELECTED_CAT":
+		case "SELECT_CAT_DETAILS":
 			return {
 				...state,
 				selectedCat: state.allCats.find((cat) => cat.id === action.payload.id)
 			};
-		case "DESELECT_CAT":
+		case "DESELECT_CAT_DETAILS":
 			return {
 				...state,
 				selectedCat: null

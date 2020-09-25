@@ -69,7 +69,7 @@ const mapDispatchToProps = (dispatch) => {
 		likeCat: (id) => dispatch({ type: "LIKE_CAT", payload: { id } }),
 		dislikeCat: (id) => dispatch({ type: "DISLIKE_CAT", payload: { id } }),
 		selectCatDetails: (id) =>
-			dispatch({ type: "SELECTED_CAT", payload: { id } })
+			dispatch({ type: "SELECT_CAT_DETAILS", payload: { id } })
 	};
 };
 

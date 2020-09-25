@@ -96,7 +96,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		deselectCatDetails: () => dispatch({ type: "DESELECT_CAT" }),
+		deselectCatDetails: () => dispatch({ type: "DESELECT_CAT_DETAILS" }),
 		likeCat: (id) => dispatch({ type: "LIKE_CAT", payload: { id } }),
 		dislikeCat: (id) => dispatch({ type: "DISLIKE_CAT", payload: { id } })
 	};
