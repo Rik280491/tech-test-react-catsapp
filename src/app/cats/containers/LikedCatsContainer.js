@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import "./LikedCatsContainer.css";
-import "./CatsContainer.css";
 import CatCard from "../cards/CatCard";
 
 const LikedCatsContainer = ({ likedCats }) => {

@@ -10,3 +10,15 @@ html {
 * {
 	box-sizing: inherit;
 }
+
+/* CatsContainer.js, LikedCatsContainer.js */
+.cats__container {
+	display: grid;
+	position: relative;
+	grid-template-columns: repeat(2, 159px);
+	grid-gap: 20px 17px;
+	left: 20px;
+	right: 20px;
+	top: 237px;
+	margin-bottom: 34px;
+}

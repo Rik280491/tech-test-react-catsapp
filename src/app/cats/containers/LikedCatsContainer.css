@@ -1,18 +1,17 @@
-/* .cats__container {} is in './CatsContainer.css' */
+/* .cats__container {} is in App.css */
 
 #no-like-message {
-	position: relative;
+	position: absolute;
 	width: 201px;
 	height: 48px;
-	left: 72px;
-	top: 171px;
+	left: 62px;
+	top: 133px;
 
 	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
 	line-height: 120%;
-	/* or 24px */
 	text-align: center;
 	color: #b3bdd2;
 }

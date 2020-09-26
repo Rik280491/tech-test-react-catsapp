@@ -2,29 +2,25 @@ html {
 	background-color: #f8efe6;
 }
 
-#launch__container {
-}
-
 #catsat__logo {
 	position: absolute;
 	width: 70px;
 	height: 70px;
-	left: 153px;
 	top: 263px;
+	left: 153px;
 }
 #launch__title {
 	position: absolute;
-	left: 37.6%;
-	right: 37.87%;
-	top: 52.62%;
-	bottom: 41.23%;
+	width: 92px;
+	height: 41px;
+	top: 351px;
+	left: 141px;
 
 	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 32px;
 	line-height: 41px;
-	/* identical to box height, or 128% */
 
 	text-align: center;
 	letter-spacing: -0.03em;

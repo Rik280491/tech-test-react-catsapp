@@ -1,10 +1,1 @@
-.cats__container {
-	display: grid;
-	position: relative;
-	grid-template-columns: repeat(2, 159px);
-	grid-gap: 20px 17px;
-	left: 20px;
-	right: 20px;
-	top: 237px;
-	bottom: 34px;
-}
+/* .cats__container {} is in App.css */

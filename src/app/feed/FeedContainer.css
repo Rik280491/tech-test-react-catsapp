@@ -1,7 +1,7 @@
 #feed {
 	position: relative;
 	width: 375px;
-	height: 1001px;
+	height: 100vh;
 }
 
 #feed__title {
@@ -10,6 +10,7 @@
 	height: 41px;
 	left: 141px;
 	top: 40px;
+	margin-top: 0;
 
 	font-family: Avenir Next;
 	font-style: normal;
@@ -28,6 +29,7 @@
 	height: 48px;
 	left: 87px;
 	top: 88px;
+	margin-top: 0;
 
 	font-family: Avenir Next;
 	font-style: normal;
@@ -43,7 +45,7 @@
 	width: 140px;
 	height: 36px;
 	left: 39px;
-	top: 172px;
+	top: 163px;
 	background: #e8eaee;
 	border-radius: 44px;
 	border: none;
@@ -70,7 +72,7 @@
 	width: 140px;
 	height: 36px;
 	left: 196px;
-	top: 172px;
+	top: 163px;
 	background: #e8eaee;
 	border-radius: 44px;
 	border: none;
