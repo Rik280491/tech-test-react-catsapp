@@ -1,10 +1,12 @@
 #cat__detail-container {
+	position: absolute;
 	width: 375px;
 	height: 100vh;
+	overflow-y: scroll;
 }
 
 #cat_details-close-btn {
-	position: relative;
+	position: absolute;
 	width: 36px;
 	height: 36px;
 	left: 319px;
@@ -138,6 +140,8 @@
 	top: 643px;
 	bottom: 56px;
 
+	width: 335px;
+	height: 190px;
 	background: #ffffff;
 	border-radius: 16px;
 }

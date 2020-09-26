@@ -1,7 +1,8 @@
 #feed {
-	position: relative;
+	position: absolute;
 	width: 375px;
 	height: 100vh;
+	overflow-y: scroll;
 }
 
 #feed__title {
