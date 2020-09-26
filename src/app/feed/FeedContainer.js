@@ -6,28 +6,24 @@ import LikedCatsContainer from "../cats/containers/LikedCatsContainer";
 import CatDetail from "../cats/details/CatDetail";
 
 const FeedContainer = ({ allCats, selectedCat }) => {
-	const [catsData, setCatsData] = useState([]);
 	const [likedCatsFeed, setLikedCatsFeed] = useState(false);
 
 	useEffect(() => {
 		document.querySelector("html").style.backgroundColor = "#FFFFFF";
 	}, []);
 
-	useEffect(() => {
-		getData();
-	}, []);
-
 	const getData = () => {
 		fetch("https://cdn.ivodigital.com/catsapp/felines.json")
 			.then((response) => response.json())
 			.then((cats) => {
-				setCatsData(cats.data);
 				allCats(cats.data);
 			})
 			.catch((error) => {
-				console.error(error);
+				throw Error(error);
 			});
 	};
+
+	useEffect(getData, []);
 
 	const renderCats = () => {
 		setLikedCatsFeed(false);
@@ -49,11 +45,7 @@ const FeedContainer = ({ allCats, selectedCat }) => {
 					<button onClick={renderLikedCats} id="feed__tab-liked">
 						Liked
 					</button>
-					{!likedCatsFeed ? (
-						<CatsContainer catsData={catsData} />
-					) : (
-						<LikedCatsContainer />
-					)}
+					{!likedCatsFeed ? <CatsContainer /> : <LikedCatsContainer />}
 				</div>
 			) : (
 				<CatDetail selectedCat={selectedCat} />

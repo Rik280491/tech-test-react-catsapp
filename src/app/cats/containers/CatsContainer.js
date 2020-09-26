@@ -1,6 +1,7 @@
 import React from "react";
 import CatCard from "../cards/CatCard";
 import "./CatsContainer.css";
+import { connect } from "react-redux";
 
 const CatsContainer = ({ catsData }) => {
 	const renderCats = () => {
@@ -20,4 +21,10 @@ const CatsContainer = ({ catsData }) => {
 	return <div className="cats__container">{renderCats()}</div>;
 };
 
-export default CatsContainer;
+const mapStateToProps = (state) => {
+	return {
+		catsData: state.CatFeed.allCats
+	};
+};
+
+export default connect(mapStateToProps, null)(CatsContainer);
