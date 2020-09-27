@@ -15,16 +15,14 @@ html {
 	height: 41px;
 	top: 351px;
 	left: 141px;
+	margin-top: 0;
 
 	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 32px;
 	line-height: 41px;
-
 	text-align: center;
 	letter-spacing: -0.03em;
-
 	color: #a88e74;
-	margin-top: 0;
 }
