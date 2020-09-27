@@ -12,9 +12,12 @@ ReactDOM.render(
 	<Provider store={store}>
 		<Router>
 			<Helmet>
-				<title>Ivo Digital Starter Project</title>
+				{/* <title>Ivo Digital Starter Project</title>
 				<meta property="og:title" content="Ivo Digital Starter Project" />
-				<meta property="og:site_name" content="Ivo Digital Starter Project" />
+				<meta property="og:site_name" content="Ivo Digital Starter Project" /> */}
+				<title>Catsat - The Catsitting App</title>
+				<meta property="og:title" content="Catsat - The Catsitting App" />
+				<meta property="og:site_name" content="Catsat - The Catsitting App" />
 			</Helmet>
 			<ScrollToTop>
 				<App />
