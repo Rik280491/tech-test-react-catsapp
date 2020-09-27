@@ -14,7 +14,7 @@ const LaunchPage = () => {
 			document.querySelector("html").style.backgroundColor = "white";
 			history.push("/feed");
 		}, 2000);
-	});
+	}, [history]);
 
 	return (
 		<>

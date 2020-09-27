@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import "./CatCard.css";
 import emptyHeartSVG from "../../../images/empty-heart.svg";
 import filledHeartSVG from "../../../images/filled-heart.svg";
+import { useHistory } from "react-router-dom";
 
 const CatCard = ({
 	name,
@@ -15,6 +16,7 @@ const CatCard = ({
 	likedCatsArr,
 	selectCatDetails
 }) => {
+	const history = useHistory();
 	const [liked, setLiked] = useState(false);
 
 	useEffect(() => {
@@ -36,6 +38,7 @@ const CatCard = ({
 
 	const showCatDetails = () => {
 		selectCatDetails(id);
+		history.push(`/cat-details/${id}`);
 	};
 
 	return (

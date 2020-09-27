@@ -4,6 +4,7 @@ import emptyHeartSVG from "../../../images/empty-heart.svg";
 import whiteHeartSVG from "../../../images/white-heart.svg";
 import closeButtonSVG from "../../../images/x-close-button.svg";
 import { connect } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 const CatDetail = ({
 	likedCatsArr,
@@ -12,6 +13,7 @@ const CatDetail = ({
 	likeCat,
 	dislikeCat
 }) => {
+	const history = useHistory();
 	const [likedCat, setLikedCat] = useState(false);
 
 	useEffect(() => {
@@ -22,6 +24,7 @@ const CatDetail = ({
 
 	const closeCatDetail = () => {
 		deselectCatDetails();
+		history.goBack();
 	};
 
 	const toggleCatLike = () => {
