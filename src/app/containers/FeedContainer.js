@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import "./FeedContainer.css";
-import CatsContainer from "../cats/containers/CatsContainer";
-import LikedCatsContainer from "../cats/containers/LikedCatsContainer";
-import CatDetail from "../cats/details/CatDetail";
+import AllCatsContainer from "./AllCatsContainer";
+import LikedCatsContainer from "./LikedCatsContainer";
+import CatDetail from "../details/CatDetail";
 
 const FeedContainer = ({ allCats, selectedCat }) => {
 	const [likedCatsFeed, setLikedCatsFeed] = useState(false);
-
-	useEffect(() => {
-		document.querySelector("html").style.backgroundColor = "#FFFFFF";
-	}, []);
 
 	const getData = () => {
 		fetch("https://cdn.ivodigital.com/catsapp/felines.json")
@@ -45,7 +41,7 @@ const FeedContainer = ({ allCats, selectedCat }) => {
 					<button onClick={renderLikedCats} id="feed__tab-liked">
 						Liked
 					</button>
-					{!likedCatsFeed ? <CatsContainer /> : <LikedCatsContainer />}
+					{!likedCatsFeed ? <AllCatsContainer /> : <LikedCatsContainer />}
 				</div>
 			) : (
 				<CatDetail selectedCat={selectedCat} />
@@ -56,7 +52,7 @@ const FeedContainer = ({ allCats, selectedCat }) => {
 
 const mapStateToProps = (state) => {
 	return {
-		selectedCat: state.CatFeed.selectedCat
+		selectedCat: state.catFeed.selectedCat
 	};
 };
 

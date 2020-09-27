@@ -1,11 +1,11 @@
 import React from "react";
 import CatCard from "../cards/CatCard";
-import "./CatsContainer.css";
+import "./AllCatsContainer.css";
 import { connect } from "react-redux";
 
-const CatsContainer = ({ catsData }) => {
+const AllCatsContainer = ({ allCatsArr }) => {
 	const renderCats = () => {
-		return catsData.map((cat, index) => {
+		return allCatsArr.map((cat, index) => {
 			return (
 				<CatCard
 					key={index}
@@ -23,8 +23,8 @@ const CatsContainer = ({ catsData }) => {
 
 const mapStateToProps = (state) => {
 	return {
-		catsData: state.CatFeed.allCats
+		allCatsArr: state.catFeed.allCats
 	};
 };
 
-export default connect(mapStateToProps, null)(CatsContainer);
+export default connect(mapStateToProps, null)(AllCatsContainer);

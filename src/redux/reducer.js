@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import CatFeed from "./CatFeed";
+import catFeed from "./catFeed";
 
 export default combineReducers({
-	CatFeed
+	catFeed
 });

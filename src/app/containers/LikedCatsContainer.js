@@ -42,7 +42,7 @@ const LikedCatsContainer = ({ likedCats }) => {
 
 const mapStateToProps = (state) => {
 	return {
-		likedCats: state.CatFeed.likedCats
+		likedCats: state.catFeed.likedCats
 	};
 };
 

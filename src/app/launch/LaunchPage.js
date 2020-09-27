@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./LaunchPage.css";
 import CatsatLogoSVG from "../../images/paw-icon.svg";
-import FeedContainer from "../feed/FeedContainer";
+import FeedContainer from "../containers/FeedContainer";
 import { useHistory } from "react-router-dom";
 
 const LaunchPage = () => {
@@ -11,7 +11,6 @@ const LaunchPage = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoad(true);
-			document.querySelector("html").style.backgroundColor = "white";
 			history.push("/feed");
 		}, 2000);
 	}, [history]);

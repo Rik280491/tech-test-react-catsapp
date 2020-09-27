@@ -9,7 +9,7 @@ html {
 	box-sizing: inherit;
 }
 
-/* CatsContainer.js, LikedCatsContainer.js */
+/* AllCatsContainer.js, LikedCatsContainer.js */
 .cats__container {
 	display: grid;
 	position: relative;

@@ -4,7 +4,7 @@ const initialState = {
 	selectedCat: null
 };
 
-const CatFeed = (state = initialState, action) => {
+const catFeed = (state = initialState, action) => {
 	switch (action.type) {
 		case "ALL_CATS":
 			return {
@@ -39,4 +39,4 @@ const CatFeed = (state = initialState, action) => {
 	}
 };
 
-export default CatFeed;
+export default catFeed;

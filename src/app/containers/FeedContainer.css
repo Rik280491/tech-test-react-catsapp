@@ -3,6 +3,7 @@
 	width: 375px;
 	height: 100vh;
 	overflow-y: scroll;
+	background: #ffffff;
 }
 
 #feed__title {

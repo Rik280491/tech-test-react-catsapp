@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./CatDetail.css";
-import emptyHeartSVG from "../../../images/empty-heart.svg";
-import whiteHeartSVG from "../../../images/white-heart.svg";
-import closeButtonSVG from "../../../images/x-close-button.svg";
+import emptyHeartSVG from "../../images/empty-heart.svg";
+import whiteHeartSVG from "../../images/white-heart.svg";
+import closeButtonSVG from "../../images/x-close-button.svg";
 import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 
@@ -56,7 +56,7 @@ const CatDetail = ({
 				<div id="cat__detail-liked" onClick={toggleCatLike}>
 					<img
 						src={whiteHeartSVG}
-						alt={` a heart to unlike ${selectedCat.name}, the cat`}
+						alt={`a heart to unlike ${selectedCat.name}, the cat`}
 					/>
 					<p>Liked</p>
 				</div>
@@ -94,7 +94,7 @@ const CatDetail = ({
 
 const mapStateToProps = (state) => {
 	return {
-		likedCatsArr: state.CatFeed.likedCats
+		likedCatsArr: state.catFeed.likedCats
 	};
 };
 
